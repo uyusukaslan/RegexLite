@@ -1,0 +1,16 @@
+# Format: pattern | text | expected
+
+a*b     | aaab     | 1
+a*b     | ac       | 0
+.*      | hello    | 1
+a.*c    | abbc     | 1
+a.*d    | abc      | 0
+c*a*b   | aab      | 1
+a*b*c   | abcx     | 0
+ab*     | abbb     | 1
+ab*     | a        | 1
+a*      |          | 1
+.*      |          | 1
+a**     |          | 0
+*       |          | 0
+.       | a        | 1
